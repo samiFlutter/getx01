@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx01/controller/controller.dart';
-import 'package:getx01/view/another.dart';
 
-import 'package:getx01/view/other.dart';
+
+import 'package:getx01/view/pageone.dart';
+import 'package:getx01/view/pagethree.dart';
+import 'package:getx01/view/pagetwo.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -21,10 +23,14 @@ class Home extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton(
-                child: Text("Go to Other"), onPressed: () => Get.to(Other())),
+
+                child: Text("page one "), onPressed: () => Get.toNamed("/pageone")),
             ElevatedButton(
-                child: Text("Go to another "),
-                onPressed: () => Get.to(AnOther())),
+                child: Text("page two "),
+                onPressed: () => Get.to(PageTwo())),
+            ElevatedButton(
+                child: Text("page three  "),
+                onPressed: () => Get.to(PageThree())),
           ],
         )),
         floatingActionButton: FloatingActionButton(
